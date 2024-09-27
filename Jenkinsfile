@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage ("GIT Checkout") {
             steps {
-                    git branch: '${env.BRANCH_NAME}', url: 'https://github.com/TresAgile/sample-python-app.git'
+                git branch: "${env.BRANCH_NAME}", url: 'https://github.com/TresAgile/sample-python-app.git'
             }
         }
         stage ("SonarQube Analysis") {
